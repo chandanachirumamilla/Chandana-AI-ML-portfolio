@@ -167,6 +167,8 @@ section:last-of-type { border-bottom: none; }
   margin-bottom: 10px;
 }
 
+.card .icon { width: 34px; height: 34px; margin-bottom: 12px; }
+
 /* ---------- Timeline (signature element) ---------- */
 
 .timeline {
