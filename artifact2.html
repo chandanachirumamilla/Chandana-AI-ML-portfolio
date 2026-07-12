@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artifact 2 — Building StudyMate AI | Chandana Chirumamilla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <span class="brand"><strong>CC</strong> / AI-ML Portfolio</span>
+    <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="artifact1.html">Artifact 1 — Timeline</a></li>
+      <li><a href="artifact2.html" class="active">Artifact 2 — AI Lab</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:48px;">
+  <div class="container">
+    <span class="eyebrow">Artifact 02 · AI Lab, AIML-500</span>
+    <h1>Building StudyMate AI<br>— From Prompt to Prototype</h1>
+    <p class="hero-lede">
+      A hands-on lab where I tested how AI tools respond to prompts and instructions,
+      applied a design thinking framework, and used what I learned to design and test
+      a working custom GPT study assistant — <strong>StudyMate AI</strong>.
+    </p>
+    <div class="skill-tags reveal" style="margin-top:20px;">
+      <span class="skill-tag">Prompt Engineering</span>
+      <span class="skill-tag">Custom GPT Configuration</span>
+      <span class="skill-tag">Design Thinking</span>
+      <span class="skill-tag">Rapid Prototyping</span>
+      <span class="skill-tag">User Testing</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:0;">
+  <div class="container reveal">
+    <img src="images/ai-lab-llm-practice.png" alt="Screenshot of an AI chatbot response explaining how AI is used in healthcare"
+         style="width:100%; max-width:640px; margin:0 auto; display:block; border-radius:12px; border:1px solid var(--border);">
+    <p style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint); margin-top:10px; text-align:center;">
+      One of my early prompt tests, comparing how an LLM explains AI's role in healthcare.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="reflection-block reveal">
+      <h3>Why I'm sharing this</h3>
+      <p>
+        My first artifact showed I can research and organize a large body of information.
+        This one shows something different: that I can actually <em>build</em> with AI
+        tools — test how they behave, apply a real design process to a problem, and end
+        up with something a user could open and use, not just a writeup.
+      </p>
+      <p class="muted" style="margin-bottom:0;">
+        For a hiring manager evaluating applied AI/product skills, I think that gap
+        matters. A lot of people can explain what a large language model is. Fewer have
+        actually sat down, tested how prompt wording changes the output, and used that
+        understanding to design something functional for a real user.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The process</span>
+      <h2>From experimentation to a working assistant</h2>
+      <p class="muted">Four stages: test how AI tools respond, apply a design framework, build a prototype, then test it against real scenarios.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="era reveal" style="--dot-color:#4fd8c4;">
+        <span class="era-range">Stage 1</span>
+        <h3>Prompt Testing with an LLM</h3>
+        <p class="era-summary">Understanding how wording changes what an AI actually returns.</p>
+        <p class="muted">
+          I gave ChatGPT three related prompts about AI in healthcare — varying only the
+          angle and specificity — and evaluated the responses on clarity, accuracy,
+          relevance, and depth. The wording shift alone changed which examples the model
+          reached for: one version leaned into medical imaging, another into hospital
+          administration.
+        </p>
+      </div>
+
+      <div class="era reveal" style="--dot-color:#4fd8c4;">
+        <span class="era-range">Stage 2</span>
+        <h3>Working with a Custom GPT</h3>
+        <p class="era-summary">Testing how a specialized assistant handles follow-up instruction.</p>
+        <p class="muted">
+          I pushed a custom GPT through a sequence of follow-ups — asking it to summarize,
+          improve its own answer, handle a "what if," explain its own reasoning, and
+          recap the conversation. It adapted cleanly at each step, which told me
+          something concrete about how instructable these systems are when you steer them
+          deliberately instead of asking one flat question.
+        </p>
+      </div>
+
+      <div class="era reveal" style="--dot-color:#8fd8b8;">
+        <span class="era-range">Stage 3</span>
+        <h3>Research Assistant Tool</h3>
+        <p class="era-summary">Seeing how AI organizes a research topic, not just answers a question.</p>
+        <p class="muted">
+          Using STORM AI on "Artificial Intelligence in Education," I watched the tool
+          break the topic into structured subtopics — personalized learning,
+          automated grading, AI tutoring — combining retrieval with generation to build
+          something closer to an outline than a single answer.
+        </p>
+      </div>
+
+      <div class="era reveal" style="--dot-color:#ffb877;">
+        <span class="era-range">Stage 4</span>
+        <h3>Design Thinking → StudyMate AI</h3>
+        <p class="era-summary">Turning what I'd learned into an actual product decision.</p>
+        <p class="muted">
+          I ran the five-stage design thinking process — empathize, define, ideate,
+          prototype, test — to design <strong>StudyMate AI</strong>, a custom GPT built to
+          help students summarize study material, get plain-language explanations of
+          complex topics, and generate practice quiz questions before exams.
+        </p>
+      </div>
+    </div>
+    <div class="reflection-block reveal">
+      <h3>Challenges &amp; Solutions</h3>
+      <p>
+        <strong>Challenge:</strong> Early prompt tests produced answers that were
+        technically correct but inconsistent in focus — the same question about AI in
+        healthcare returned very different emphases depending on phrasing, which made it
+        hard to know which response to trust as "the" answer.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Solution:</strong> I stopped treating the first response as final and
+        instead ran multiple phrasings side by side against fixed criteria (clarity,
+        accuracy, relevance, depth) before drawing conclusions. That same discipline —
+        test before trusting an output — carried into how I evaluated StudyMate AI once
+        it was built, rather than assuming the first working version was good enough.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container reveal">
+    <img src="images/ai-lab-testing.png" alt="Screenshot of StudyMate AI generating quiz questions during testing"
+         style="width:100%; max-width:640px; margin:0 auto; display:block; border-radius:12px; border:1px solid var(--border);">
+    <p style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint); margin-top:10px; text-align:center;">
+      StudyMate AI generating practice quiz questions during testing.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Results</span>
+      <h2>Testing StudyMate AI</h2>
+    </div>
+
+    <div class="card-grid">
+      <div class="card reveal">
+        <span class="tag">Test 1</span>
+        <h3>Summarize a topic</h3>
+        <p class="muted">Asked it to summarize a machine learning topic — produced a clear, structured summary.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Test 2</span>
+        <h3>Generate quiz questions</h3>
+        <p class="muted">Asked it to write multiple-choice questions on artificial intelligence — it did, correctly formatted.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Test 3</span>
+        <h3>Simplify a complex concept</h3>
+        <p class="muted">Asked it to explain a complex idea in plain language — it simplified effectively without losing accuracy.</p>
+      </div>
+    </div>
+
+    <p class="reveal" style="margin-top:24px;">
+      <a href="https://chatgpt.com/g/g-69b77c8291508191bd383ed7d35a15e6-studymate-ai" target="_blank" rel="noopener" class="btn btn-primary">Try StudyMate AI →</a>
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="reflection-block reveal">
+      <h3>Value Proposition</h3>
+      <p style="margin-bottom:0;">
+        This artifact shows I can move past just describing AI tools and actually build
+        with them — testing behavior, applying structured design thinking, and shipping
+        something a real user can open and test. That's the difference between talking
+        about AI and being able to ship it.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Unique Value</h3>
+      <p style="margin-bottom:0;">
+        Instead of treating "prompting" as an afterthought, I treated it as the actual
+        variable under test — comparing outputs side by side before ever getting to the
+        build stage. That habit of testing inputs before trusting outputs carried
+        directly into how I evaluated StudyMate AI once it existed.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Relevance</h3>
+      <p style="margin-bottom:0;">
+        For a hiring manager building AI-powered products, this shows I can operate
+        across the full loop — test a model's behavior, design around real user needs,
+        prototype quickly, and evaluate whether the result actually works, not just
+        whether it sounds right.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Lessons Learned</h3>
+      <p><strong>Prompt wording is a design decision, not an afterthought.</strong> The same underlying question produced meaningfully different answers depending on how it was framed — that changed how carefully I write prompts going forward.</p>
+      <p style="margin-bottom:0;"><strong>Design thinking works even for a "small" AI project.</strong> Running the full empathize-to-test cycle on something as small as a study assistant forced me to justify each feature against an actual user need, instead of adding features because they were technically possible.</p>
+    </div>
+
+    <div class="placeholder-note reveal">
+      Feedback and Revisions — to be added after peer/instructor review.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="disclosure reveal">
+      <strong style="color:var(--text); display:block; margin-bottom:6px;">AI Use Disclosure</strong>
+      This artifact documents hands-on work with ChatGPT, a custom GPT, and STORM AI as
+      part of an AI Lab assignment. Claude (Anthropic) was used to help organize and
+      write up this portfolio page from my original lab documentation and screenshots.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-note">Chandana Chirumamilla · AI/ML Program, Indiana Wesleyan University</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:chandana.chirumamilla@myemail.indwes.edu">Email</a>
+      <a href="https://www.linkedin.com/in/chandana1203/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
