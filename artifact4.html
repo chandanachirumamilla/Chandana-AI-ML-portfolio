@@ -209,11 +209,38 @@
     </div>
 
     <div class="reveal" style="margin-top:32px;">
-      <img src="https://dlab.epfl.ch/wikispeedia/wpcd/images/169/16921.jpg"
-           alt="The Tower of Babel, oil painting by Pieter Bruegel the Elder, 1563, depicting the unfinished tower under construction"
-           style="width:100%; max-width:600px; margin:0 auto; display:block; border-radius:10px; border:1px solid var(--border);">
+      <svg viewBox="0 0 700 320" style="width:100%; max-width:600px; margin:0 auto; display:block; background:var(--panel); border-radius:10px; border:1px solid var(--border);">
+        <!-- sky -->
+        <rect x="0" y="0" width="700" height="320" fill="var(--panel)"/>
+        <!-- ground -->
+        <rect x="0" y="270" width="700" height="50" fill="var(--panel-raised)"/>
+        <!-- spiral unfinished tower, tapering, with visible construction gaps -->
+        <g fill="none" stroke="#ff9b4d" stroke-width="2.5" stroke-linecap="round">
+          <ellipse cx="350" cy="270" rx="150" ry="26"/>
+          <ellipse cx="350" cy="235" rx="128" ry="22"/>
+          <ellipse cx="350" cy="200" rx="106" ry="19"/>
+          <ellipse cx="350" cy="168" rx="86" ry="16"/>
+          <ellipse cx="350" cy="140" rx="66" ry="13"/>
+          <ellipse cx="350" cy="115" rx="48" ry="10"/>
+          <ellipse cx="350" cy="94" rx="32" ry="8"/>
+        </g>
+        <!-- vertical construction lines, deliberately uneven / incomplete -->
+        <g stroke="#7a5636" stroke-width="1.6" opacity="0.7">
+          <line x1="205" y1="270" x2="222" y2="140"/>
+          <line x1="270" y1="270" x2="284" y2="105"/>
+          <line x1="350" y1="270" x2="350" y2="86"/>
+          <line x1="430" y1="270" x2="416" y2="112"/>
+          <line x1="495" y1="270" x2="470" y2="150"/>
+        </g>
+        <!-- scaffolding gaps to suggest "unfinished" -->
+        <g stroke="var(--text-faint)" stroke-width="1.2" stroke-dasharray="4 5" opacity="0.6">
+          <line x1="230" y1="200" x2="470" y2="200"/>
+          <line x1="255" y1="160" x2="445" y2="160"/>
+        </g>
+        <text x="350" y="305" text-anchor="middle" fill="var(--text-faint)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1">AN UNFINISHED TOWER — GENESIS 11</text>
+      </svg>
       <p class="muted" style="text-align:center; font-size:0.8rem; font-family:var(--font-mono); margin-top:8px;">
-        <em>The Tower of Babel</em>, Pieter Bruegel the Elder, 1563 — public domain, via Wikimedia Commons.
+        An original illustration, not a reproduction — representing the unfinished tower from Genesis 11.
       </p>
     </div>
   </div>
