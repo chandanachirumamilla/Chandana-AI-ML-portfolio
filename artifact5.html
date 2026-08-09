@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artifact 5 — Machine Learning Types in Practice | Chandana Chirumamilla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <span class="brand"><strong>CC</strong> / AI-ML Portfolio</span>
+    <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="artifact1.html">Artifact 1 — Timeline</a></li>
+      <li><a href="artifact2.html">Artifact 2 — AI Lab</a></li>
+      <li><a href="artifact3.html">Artifact 3 — AI Opportunity</a></li>
+      <li><a href="artifact4.html">Artifact 4 — Communication</a></li>
+      <li><a href="artifact5.html" class="active">Artifact 5 — ML Types</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:48px;">
+  <div class="container">
+    <span class="eyebrow">Artifact 05 · Applied Machine Learning, AIML-500 Workshop 2</span>
+    <h1>Machine Learning Types<br>in Practice</h1>
+    <p class="hero-lede">
+      Three real machine learning workflows, coded and run end-to-end in Python: a
+      classification model on live banking data, a regression model predicting concrete
+      strength, and a clustering model uncovering hidden student groups — with the
+      actual metrics and charts my code produced.
+    </p>
+    <div class="skill-tags reveal" style="margin-top:20px;">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">scikit-learn</span>
+      <span class="skill-tag">Classification</span>
+      <span class="skill-tag">Regression</span>
+      <span class="skill-tag">K-Means Clustering</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="reflection-block reveal">
+      <h3>Introduction</h3>
+      <p>
+        A classmate's Workshop 5 feedback pushed me to add more technical, hands-on
+        work to this portfolio, and this artifact is my direct response. For Workshop 2
+        of AIML-500, I worked through a notebook covering the three core machine
+        learning paradigms — supervised classification, supervised regression, and
+        unsupervised clustering — implementing each one in Python against real public
+        datasets rather than toy examples.
+      </p>
+      <p class="muted" style="margin-bottom:0;">
+        For a technical hiring manager, this is the artifact that answers a question my
+        other four can't: can I actually write the code, train the model, and read the
+        output correctly — not just talk about machine learning in the abstract.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Objective</h3>
+      <p style="margin-bottom:0;">
+        Implement one example each of classification, regression, and clustering using
+        scikit-learn, evaluate each model with the correct metrics for its task, and
+        correctly interpret what those metrics actually mean for the underlying business
+        or research question — not just report a single accuracy number.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Process</h3>
+      <p style="margin-bottom:0;">
+        I trained a Logistic Regression classifier on the UCI Bank Marketing dataset
+        (45,211 real customer records) to predict term-deposit subscription, a Linear
+        Regression model on the UCI Concrete Compressive Strength dataset (1,030
+        samples) to predict a continuous engineering measurement, and a K-Means
+        clustering model on the UCI Higher Education Students Performance dataset (145
+        students, 31 features) to discover natural student groupings with no labels
+        involved at all. Each workflow followed the same discipline: explore the data
+        first, preprocess appropriately for the algorithm, train on a held-out split,
+        and evaluate with metrics suited to the task rather than defaulting to accuracy.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Tools &amp; Technologies Used</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Python 3 / Jupyter Notebook</span>
+        <span class="skill-tag">scikit-learn — LogisticRegression, LinearRegression, KMeans, PCA</span>
+        <span class="skill-tag">Pandas / NumPy</span>
+        <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">UCI Machine Learning Repository datasets</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Workflow 1 — Classification</span>
+      <h2>Will a customer subscribe to a term deposit?</h2>
+      <p class="muted">Logistic Regression on the UCI Bank Marketing dataset (45,211 records, 16 features).</p>
+    </div>
+
+    <div class="reveal" style="margin-bottom:24px;">
+      <img src="images/wk2-target-distribution.png" alt="Bar chart showing the imbalanced target distribution in the bank marketing dataset — most customers did not subscribe"
+           style="width:100%; max-width:500px; margin:0 auto; display:block; border-radius:10px; border:1px solid var(--border); background:var(--panel);">
+    </div>
+
+    <div class="reveal" style="overflow-x:auto; margin-bottom:24px;">
+      <table class="company-table">
+        <thead>
+          <tr><th>Metric</th><th>Score</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Accuracy</td><td>89.68%</td></tr>
+          <tr><td>Precision (subscribed)</td><td>62%</td></tr>
+          <tr><td>Recall (subscribed)</td><td>30%</td></tr>
+          <tr><td>F1-score (subscribed)</td><td>40%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="reveal">
+      <img src="images/wk2-confusion-matrix.png" alt="Confusion matrix for the bank marketing classification model"
+           style="width:100%; max-width:420px; margin:0 auto; display:block; border-radius:10px; border:1px solid var(--border); background:var(--panel);">
+    </div>
+
+    <p class="reveal" style="margin-top:24px; margin-bottom:0;">
+      The headline 89.68% accuracy looks strong on its own, but the dataset is
+      imbalanced — only about 12% of customers actually subscribed. The confusion
+      matrix tells the real story: the model correctly caught 317 subscribers but missed
+      741 of them, for a recall of just 30%. A model that mostly predicts "no" will
+      score high on accuracy in this kind of dataset without being especially useful for
+      a marketing team trying to find likely subscribers.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Workflow 2 — Regression</span>
+      <h2>Predicting concrete compressive strength</h2>
+      <p class="muted">Linear Regression on the UCI Concrete Compressive Strength dataset (1,030 samples, 8 mixture/age features).</p>
+    </div>
+
+    <div class="reveal" style="margin-bottom:24px;">
+      <img src="images/wk2-concrete-distribution.png" alt="Histogram of concrete compressive strength values"
+           style="width:100%; max-width:500px; margin:0 auto; display:block; border-radius:10px; border:1px solid var(--border); background:var(--panel);">
+    </div>
+
+    <div class="reveal" style="overflow-x:auto; margin-bottom:24px;">
+      <table class="company-table">
+        <thead>
+          <tr><th>Metric</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mean Absolute Error (MAE)</td><td>7.75 MPa</td></tr>
+          <tr><td>Root Mean Squared Error (RMSE)</td><td>9.80 MPa</td></tr>
+          <tr><td>R² (variance explained)</td><td>0.628</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="reveal">
+      <img src="images/wk2-actual-vs-predicted.png" alt="Scatter plot of actual vs predicted concrete compressive strength"
+           style="width:100%; max-width:500px; margin:0 auto; display:block; border-radius:10px; border:1px solid var(--border); background:var(--panel);">
+    </div>
+
+    <p class="reveal" style="margin-top:24px; margin-bottom:0;">
+      An R² of 0.628 means the model explains roughly 63% of the variation in concrete
+      strength from mixture composition and age alone — a reasonable baseline, not a
+      finished product. The scatter plot makes the model's limits visible: points cluster
+      near the reference line at lower strength values but spread out more at the high
+      end, suggesting the true relationship isn't fully linear and a more flexible model
+      (like a Random Forest or Gradient Boosting regressor) would likely close that gap.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Workflow 3 — Unsupervised Learning</span>
+      <h2>Finding student groups with no labels at all</h2>
+      <p class="muted">K-Means clustering on the UCI Higher Education Students Performance dataset (145 students, 31 features).</p>
+    </div>
+
+    <div class="reveal" style="margin-bottom:24px;">
+      <img src="images/wk2-elbow-method.png" alt="Elbow method chart showing within-cluster sum of squares for K=1 to 10"
+           style="width:100%; max-width:500px; margin:0 auto; display:block; border-radius:10px; border:1px solid var(--border); background:var(--panel);">
+    </div>
+
+    <div class="reveal">
+      <img src="images/wk2-cluster-pca.png" alt="Scatter plot of four student clusters projected onto two principal components"
+           style="width:100%; max-width:560px; margin:0 auto; display:block; border-radius:10px; border:1px solid var(--border); background:var(--panel);">
+    </div>
+
+    <p class="reveal" style="margin-top:24px; margin-bottom:0;">
+      With no target variable involved, I used the Elbow Method to choose K = 4 clusters,
+      then reduced the 31 original features to two principal components with PCA just to
+      make the groups visible. The model split the 145 students into groups of 34, 18,
+      56, and 37 based purely on demographic, study-habit, and engagement patterns —
+      without ever seeing their grades. That's the core difference from the first two
+      workflows: the structure came entirely from the data itself, not from a label I
+      was trying to predict.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="reflection-block reveal">
+      <h3>Challenges &amp; Solutions</h3>
+      <p>
+        <strong>Challenge:</strong> My first read of the classification results was that
+        89.68% accuracy meant the model was working well — a natural but misleading
+        conclusion given how imbalanced the dataset was.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Solution:</strong> Looking at the confusion matrix and the classification
+        report instead of the single accuracy number showed the real gap: the model was
+        missing 7 out of every 10 actual subscribers. That distinction — between a
+        number that looks good and a model that's actually useful for the business
+        question being asked — was the single most useful thing this artifact taught me.
+      </p>
+    </div>
+
+    <div class="section-head reveal" style="margin-top:12px;">
+      <span class="eyebrow">Value Proposition of the Artifact</span>
+      <h2>What this artifact demonstrates</h2>
+      <p class="muted">
+        This artifact shows I can implement, not just describe, the three foundational
+        machine learning paradigms — and that I know which evaluation metric actually
+        matters for each type of problem, rather than reaching for accuracy by default.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Unique Value</h3>
+      <p style="margin-bottom:0;">
+        Covering all three paradigms side by side, on three different real datasets,
+        makes the contrast between them concrete rather than theoretical: classification
+        needed precision/recall because of class imbalance, regression needed error
+        magnitude metrics because there's no "correct class," and clustering needed
+        neither, because there was nothing to predict in the first place.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Relevance</h3>
+      <p style="margin-bottom:0;">
+        Nearly every AI/ML role eventually requires choosing the right paradigm for a
+        given business problem and evaluating a model honestly rather than by whichever
+        number looks best. This artifact is direct evidence I can do that, not just
+        explain it in an interview.
+      </p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Lessons Learned</h3>
+      <p><strong>Accuracy lies on imbalanced data.</strong> The classification workflow was the clearest example in my coursework so far of why a single metric can be actively misleading without the right context.</p>
+      <p style="margin-bottom:0;"><strong>Unsupervised learning requires a different kind of judgment.</strong> Without a label to check against, evaluating the clustering result meant relying on the Elbow Method and visual inspection rather than a clean right-or-wrong answer — a genuinely different skill from the other two workflows.</p>
+    </div>
+
+    <div class="reflection-block reveal">
+      <h3>Feedback and Revisions</h3>
+      <p style="margin-bottom:0;">
+        This artifact was added specifically in response to Workshop 5 peer feedback
+        requesting more technical work in the portfolio. As a new artifact, no prior
+        revisions apply.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="disclosure reveal">
+      <strong style="color:var(--text); display:block; margin-bottom:6px;">References</strong>
+      Géron, A. (2023). <em>Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow</em> (3rd ed.). O'Reilly Media.<br>
+      James, G., Witten, D., Hastie, T., &amp; Tibshirani, R. (2021). <em>An introduction to statistical learning: With applications in R</em> (2nd ed.). Springer.<br>
+      Mitchell, T. M. (1997). <em>Machine learning</em>. McGraw-Hill.<br>
+      Pedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. <em>Journal of Machine Learning Research, 12</em>, 2825–2830.<br>
+      UCI Machine Learning Repository. (2025). <em>Bank Marketing Dataset; Concrete Compressive Strength Dataset; Higher Education Students Performance Evaluation Dataset</em>. University of California, Irvine.
+      <div style="margin-top:14px; font-size:0.85rem;">
+        Based on the Workshop 2 notebook assignment for AIML-500 (Indiana Wesleyan
+        University). The datasets, code execution, and results shown are my own; the
+        write-up here is written independently and does not reproduce the original
+        assignment's instructional text.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-note">Chandana Chirumamilla · AI/ML Program, Indiana Wesleyan University</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:chandana.chirumamilla@myemail.indwes.edu">Email</a>
+      <a href="https://www.linkedin.com/in/chandana1203/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
